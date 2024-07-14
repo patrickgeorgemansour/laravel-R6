@@ -6,11 +6,30 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-/*Route::get('/w', function () {
-return "hello laravel!!";
+Route::get('cv', function () {
+    return view('cv');
 });
 
-Route::get('/cars/{id?}', function ($id=0) {
+Route::get('login', function () {
+    return view('login');
+});
+
+Route::post('data', function () {
+    return "data entered successful";
+})->name('data');;
+
+
+/*Route::get('link', function () {
+    $url = route('w');
+    return "<a href='$url'>go to welcome</a>";
+});*/
+
+
+/*Route::get('/w', function () {
+return "hello laravel!!";
+});*/
+
+/*Route::get('/cars/{id?}', function ($id=0) {
 return "car number is ". $id;
 })->whereNumber('id');
 
@@ -22,13 +41,13 @@ return "username is ". $name ." and age is " .$age ;
 })->where([
 'name'=>'[a-zA-Z]+',
 'age'=>'[0-9]+'
-]);
+]);*/
 
-Route::get('/car/{name}', function ($name) {
+/*Route::get('/car/{name}', function ($name) {
 return "name is ". $name;
-})->whereIn('name',['BMW','Nissan']);
+})->whereIn('name',['BMW','Nissan']);*/
 
-Route::prefix('company')->group(function () {
+/*Route::prefix('company')->group(function () {
 Route::get('', function () {
 return 'company index';
 });
@@ -40,7 +59,8 @@ return 'company it';
 });
 });*/
 
-Route::prefix('accounts')->group(function () {
+//task 2
+/*Route::prefix('accounts')->group(function () {
     Route::get('', function () {
         return 'They are accounts';
     });
@@ -73,4 +93,8 @@ Route::prefix('cars')->group(function () {
         });
     });
 
-});
+});*/
+
+   /* Route::fallback(function() {
+        return redirect('/');
+    });*/
