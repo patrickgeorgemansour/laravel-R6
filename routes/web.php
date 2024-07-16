@@ -47,9 +47,9 @@ return "username is ". $name ." and age is " .$age ;
 'age'=>'[0-9]+'
 ]);*/
 
-/*Route::get('/car/{name}', function ($name) {
+Route::get('/car/{name}', function ($name) {
 return "name is ". $name;
-})->whereIn('name',['BMW','Nissan']);*/
+})->whereIn('name',['BMW','Nissan']);
 
 /*Route::prefix('company')->group(function () {
 Route::get('', function () {
